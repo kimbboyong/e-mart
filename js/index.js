@@ -117,3 +117,30 @@ $('.side_bar .content .wrap .left').click(function () {
         $thisImg.css('transform', 'rotate(0deg)');
     }
 })
+
+$("input:radio[name='chk']").click(function () {
+
+    const radioName = $(this).val();
+
+    $(`.use .swiper`).css('display', 'none');
+    $(`.use .swiper.${radioName}`).css('display', 'block');
+
+    // if ($(this).is(':checked')) {
+    //     $("input:radio[name='chk']").prop('checked', false);
+    //     $(this).prop('checked', true);
+    // }
+    // if ($("input:radio[id='one_p']").is(':checked')) {
+    //     $('.use .content .right .inner').css('display', 'none');
+    //     $('.use .content .right .one').css('display', 'block');
+    // }
+    // else if ($("input:radio[id='two_p']").is(':checked')) {
+    //     $('.use .content .right .inner').css('display', 'none');
+    //     $('.use .content .right .two').css('display', 'block');
+    // }
+    // else if ($("input:radio[id='new']").is(':checked')) {
+    //     $('.use .content .right .inner').css('display', 'none');
+    //     $('.use .content .right .new').css('display', 'block');
+    // }
+})
+
+

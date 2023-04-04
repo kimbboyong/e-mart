@@ -70,6 +70,8 @@
     height: 100%;
 }
 
+
+
 .nav .center>ul {
     display: flex;
     justify-content: center;
@@ -78,17 +80,54 @@
     height: 100%;
 }
 
-.nav .center .menu .title a {
-    color: #333;
-    font-size: 1.25em;
+.nav .center .menu {
+    height: 100%;
+    line-height: 80px;
+}
+
+.nav .center .menu_wrap:hover .bg {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+}
+
+.nav .center .menu_wrap:hover .sub_menu {
+    display: block;
+}
+
+.nav .center .bg {
+    background: #4e5059dd;
+    height: 226px;
+    position: absolute;
+    left: -100%;
+    top: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: .4s ease;
 }
 
 .nav .center .sub_menu {
+    display: none;
+}
+
+.nav .center .sub_menu ul {
     position: absolute;
-    left: 0;
-    bottom: -48px;
-    background: #f00;
-    width: 100%;
+    margin-top: 15px;
+}
+
+.nav .center .sub_menu li {
+    line-height: 30px;
+}
+
+.nav .center .sub_menu li a {
+    color: #ebebeb;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.nav .center .sub_menu li a:hover {
+    color: #f9bb00;
 }
 
 .nav .top_item .right {
@@ -430,6 +469,11 @@
     display: flex;
 }
 
+.use .content .right .two,
+.use .content .right .new {
+    display: none;
+}
+
 .use .content .right li {
     width: 25%;
     display: flex;
@@ -484,13 +528,20 @@
 
 .use .content .right .bottom {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 15%;
 }
 
 .use .content .right .bottom strong {
     font-size: .95em;
+    font-weight: 500;
     color: #333;
     display: block;
-    margin-bottom: 20px;
+    word-break: keep-all;
+    line-height: 1.2;
 }
 
 .use .content .right .bottom span {
@@ -562,11 +613,20 @@
 
 .only .content .bottom figure {
     width: 32px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+}
+
+.only .content .bottom .only_sub_03 {
+    width: 52px;
+}
+
+.only .content .bottom .only_sub_03 {
+    width: 52px;
 }
 
 .only .content .bottom .txt {
     text-align: center;
+    line-height: 1.6;
 }
 
 
@@ -768,6 +828,7 @@
     transform: translateY(-50%);
     right: 24px;
     width: 54px;
+    cursor: pointer;
 }
 
 .search .left .search_wrap .tag ul {
