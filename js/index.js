@@ -77,18 +77,6 @@ var swiper = new Swiper(".story .mySwiper", {
 
 AOS.init();
 
-function sideOpen() {
-    $('.nav .top_item .right').click(function () {
-        $('.nav .side_bar').addClass('on');
-    })
-}
-
-function sideClose() {
-    $('.side_bar .close').click(function () {
-        $('.nav .side_bar').removeClass('on');
-    })
-}
-
 $('.side_bar .content .wrap .left').click(function () {
 
     const $parentThis = $(this).closest('.item');
@@ -124,23 +112,14 @@ $("input:radio[name='chk']").click(function () {
 
     $(`.use .swiper`).css('display', 'none');
     $(`.use .swiper.${radioName}`).css('display', 'block');
+})
 
-    // if ($(this).is(':checked')) {
-    //     $("input:radio[name='chk']").prop('checked', false);
-    //     $(this).prop('checked', true);
-    // }
-    // if ($("input:radio[id='one_p']").is(':checked')) {
-    //     $('.use .content .right .inner').css('display', 'none');
-    //     $('.use .content .right .one').css('display', 'block');
-    // }
-    // else if ($("input:radio[id='two_p']").is(':checked')) {
-    //     $('.use .content .right .inner').css('display', 'none');
-    //     $('.use .content .right .two').css('display', 'block');
-    // }
-    // else if ($("input:radio[id='new']").is(':checked')) {
-    //     $('.use .content .right .inner').css('display', 'none');
-    //     $('.use .content .right .new').css('display', 'block');
-    // }
+$('.nav .top_item .right').click(function () {
+    $('.nav .side_bar').addClass('on');
+})
+
+$('.side_bar .close').click(function () {
+    $('.nav .side_bar').removeClass('on');
 })
 
 

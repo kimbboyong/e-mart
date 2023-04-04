@@ -46,6 +46,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    box-shadow: -3px -4px 13px rgba(0, 0, 0, 0.5);
 }
 
 .nav .inner {
@@ -957,6 +958,11 @@
     font-size: 1em;
     position: relative;
     padding-left: 15px;
+    transition: .4s ease;
+}
+
+.app .down_btn a:hover {
+    transform: scale(.9);
 }
 
 .app .down_btn a::after {
@@ -1496,7 +1502,7 @@ footer .bottom .sns .tiktok {
     }
 
     .banner img {
-        border-radius: 0 0 24px 24px;
+        border-radius: 0 0 12px 12px;
     }
 
     .use .content {
