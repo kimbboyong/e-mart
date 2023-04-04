@@ -1,2 +1,1 @@
-# project_02
-#H1 https://kimbboyong.github.io/e-mart/
+# https://kimbboyong.github.io/e-mart/
